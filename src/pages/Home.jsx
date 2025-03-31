@@ -34,7 +34,90 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
       {/* Hero Section with Spline Background */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[100vh] h-auto py-20 md:py-0 flex items-center justify-center overflow-hidden">
+        {/* Top Left Corner Effects */}
+        <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+          {/* Decorative Corner Elements */}
+          <div className="absolute top-0 left-0 w-[200px] md:w-[300px] h-[200px] md:h-[300px]">
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl"
+              animate={{
+                scale: [1, 1.2, 1],
+                opacity: [0.3, 0.5, 0.3],
+              }}
+              transition={{
+                duration: 8,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+            <motion.div
+              className="absolute top-0 left-0 w-16 md:w-24 h-16 md:h-24 bg-gradient-to-br from-blue-500/30 to-purple-500/30 rounded-full blur-xl"
+              animate={{
+                scale: [1, 1.1, 1],
+                opacity: [0.4, 0.6, 0.4],
+              }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+          </div>
+
+          {/* Animated Lines */}
+          <motion.div
+            className="absolute top-0 left-0 w-[300px] md:w-[400px] h-[2px] bg-gradient-to-r from-blue-500/50 to-purple-500/50"
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 1.5, delay: 0.5 }}
+          />
+          <motion.div
+            className="absolute top-0 left-0 w-[2px] h-[300px] md:h-[400px] bg-gradient-to-b from-blue-500/50 to-purple-500/50"
+            initial={{ scaleY: 0 }}
+            animate={{ scaleY: 1 }}
+            transition={{ duration: 1.5, delay: 0.7 }}
+          />
+
+          {/* Floating Elements */}
+          <motion.div
+            className="absolute top-20 left-20 w-4 h-4 bg-blue-500/20 rounded-full"
+            animate={{
+              y: [0, -20, 0],
+              opacity: [0.3, 0.5, 0.3],
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+          <motion.div
+            className="absolute top-32 left-32 w-3 h-3 bg-purple-500/20 rounded-full"
+            animate={{
+              y: [0, -15, 0],
+              opacity: [0.3, 0.5, 0.3],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+          <motion.div
+            className="absolute top-40 left-40 w-2 h-2 bg-blue-500/20 rounded-full"
+            animate={{
+              y: [0, -10, 0],
+              opacity: [0.3, 0.5, 0.3],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        </div>
+
         {/* Base Background with Enhanced Gradient */}
         <div 
           className="absolute inset-0"
